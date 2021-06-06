@@ -9,7 +9,7 @@ public class Assignment {
 	private LocalDate initialDate;
 	private LocalDate dueDate;
 	private boolean status;
-	// chlen-promenlivite na obektite ot tip Assignment
+	// Parameters of the Assignment class
 
 	public Assignment(String name, String person, LocalDate initialDate, LocalDate dueDate, boolean status) {
 		this.name = name;
@@ -18,7 +18,7 @@ public class Assignment {
 		this.dueDate = dueDate;
 		this.status = status;
 	}
-	// Public konstruktor za Assignment
+	// Public constructor for the Assignment class
 
 	public String toString() {
 		String s = name + "\t";
@@ -29,7 +29,7 @@ public class Assignment {
 		return s;
 	}
 
-	// toString metod za obektite ot tip Assignment
+	// toString method
 	/**
 	 * @return the name
 	 */
@@ -44,7 +44,7 @@ public class Assignment {
 		this.name = name;
 	}
 
-	// Mutator i aksesor za poleto name
+	// Get and set methods for the name argument
 	/**
 	 * @return the person
 	 */
@@ -59,7 +59,7 @@ public class Assignment {
 		this.person = person;
 	}
 
-	// Mutator i aksesor za poleto person
+	// Get and set methods for the person argument
 	/**
 	 * @return the initialDate
 	 */
@@ -74,7 +74,7 @@ public class Assignment {
 		this.initialDate = initialDate;
 	}
 
-	// Mutator i aksesor za poleto initialDate
+	// Get and set methods for the initialDate argument
 	/**
 	 * @return the dueDate
 	 */
@@ -89,7 +89,7 @@ public class Assignment {
 		this.dueDate = dueDate;
 	}
 
-	// Mutator i aksesor za poleto dueDate
+	// Get and set methods for the dueDate argument
 	/**
 	 * @return the status
 	 */
@@ -103,6 +103,6 @@ public class Assignment {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	// Mutator i aksesor za poleto status
+	// Get and set methods for the status argument
 
 }

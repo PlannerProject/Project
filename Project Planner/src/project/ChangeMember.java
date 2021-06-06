@@ -18,12 +18,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class ChangeMember extends JPanel {
+public class ChangeMember extends JPanel { // Nasledqva JPanel
 	File flTeam = new File("src/project/Team.txt");
 	JButton btnChangeMember;
 	JTextField txtChangeMember;
 	JTextArea txtMembers;
 	JLabel lblChangeMember;
+	// Variables of the ChangeMember class
 
 	// JPanel for adding new members to the team - consists of 2 boxes (left and
 	// right)
@@ -68,7 +69,7 @@ public class ChangeMember extends JPanel {
 		// JButton for adding a new member after typing the name
 		btnChangeMember = new JButton();
 		btnChangeMember.setFont(font_bold);
-		
+
 		boxRight.add(btnChangeMember);
 		boxRight.add(Box.createVerticalGlue()); // add vertical glue
 
