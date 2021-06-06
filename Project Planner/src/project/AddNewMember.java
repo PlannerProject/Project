@@ -14,7 +14,7 @@ public class AddNewMember extends ChangeMember { // AddNewMember class extends C
 		// TODO Auto-generated constructor stub
 		super.lblChangeMember.setText("Enter the name of a new member         ");
 		super.btnChangeMember.setText("Add Member");
-		// Setting text to the labels
+		// Setting text to the label and button of the ChangeMember class
 		super.btnChangeMember.addActionListener(new ActionListener() { // Adding Action Listener to the
 																		// ChangeMember("Add new Member") button
 			@Override
