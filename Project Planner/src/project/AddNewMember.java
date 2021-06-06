@@ -7,22 +7,22 @@ import javax.swing.*;
 
 @SuppressWarnings("serial")
 
-public class AddNewMember extends ChangeMember{
+public class AddNewMember extends ChangeMember{ //Klasut AddNewMember nasledqva ChangeMember
 
-	public AddNewMember(JDialog dlg) {
+	public AddNewMember(JDialog dlg) { //Priema parametur ot tip JDialog
 		super(dlg);
 		// TODO Auto-generated constructor stub
-		super.lblChangeMember.setText("Enter the name of a new member         ");
+		super.lblChangeMember.setText("Enter the name of a new member         "); 
 		super.btnChangeMember.setText("Add Member");
-		super.btnChangeMember.addActionListener(new ActionListener() {
-			
+		//zadava tekst na JLabel-ite 
+		super.btnChangeMember.addActionListener(new ActionListener() { //Dobawqme funkcionalnost na butona AddMember
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				String name = AddNewMember.super.txtChangeMember.getText();
-				Team.addMember(name);
-				dlg.dispose();
-				Planner.setTeam();
+				String name = AddNewMember.super.txtChangeMember.getText(); //String sus stoinostta, vuvedena ot potrebitelq
+				Team.addMember(name); //Dobavq imeto na noviq uchastnik kum ekipa
+				dlg.dispose(); //Zatvarq dialogoviq prozorec
+				Planner.setTeam(); //Izvikva metoda setTeam na klasa Planner
 			}
 		});
 	}
