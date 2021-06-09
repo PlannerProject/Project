@@ -17,173 +17,173 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
-public class AddNewAssignment extends JDialog { //с класа AddNewAssignment създаваме диалогов прозорец
+public class AddNewAssignment extends JDialog { //СЃ РєР»Р°СЃР° AddNewAssignment СЃСЉР·РґР°РІР°РјРµ РґРёР°Р»РѕРіРѕРІ РїСЂРѕР·РѕСЂРµС†
 
-	private static final long serialVersionUID = 2466213780045701241L; //уникалният номер на класа
-	Planner planner; //член-променлива от тип Planner
+	private static final long serialVersionUID = 2466213780045701241L; //СѓРЅРёРєР°Р»РЅРёСЏС‚ РЅРѕРјРµСЂ РЅР° РєР»Р°СЃР°
+	Planner planner; //С‡Р»РµРЅ-РїСЂРѕРјРµРЅР»РёРІР° РѕС‚ С‚РёРї Planner
 
-	public AddNewAssignment(Planner planner) { //този конструктор приема параметър от тип Planner
+	public AddNewAssignment(Planner planner) { //С‚РѕР·Рё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїСЂРёРµРјР° РїР°СЂР°РјРµС‚СЉСЂ РѕС‚ С‚РёРї Planner
 		super(planner, "Add new assignment", true); 
-		this.planner = planner; //planner на обекта от тип AddNewAssignment приема стойността на подадения planner
-		this.setSize(815, 375); //задаваме размери на диалоговия прозореца
-		this.setLocationRelativeTo(planner); //задаваме позицията на прозореца спрямо компонента
+		this.planner = planner; //planner РЅР° РѕР±РµРєС‚Р° РѕС‚ С‚РёРї AddNewAssignment РїСЂРёРµРјР° СЃС‚РѕР№РЅРѕСЃС‚С‚Р° РЅР° РїРѕРґР°РґРµРЅРёСЏ planner
+		this.setSize(815, 375); //Р·Р°РґР°РІР°РјРµ СЂР°Р·РјРµСЂРё РЅР° РґРёР°Р»РѕРіРѕРІРёСЏ РїСЂРѕР·РѕСЂРµС†Р°
+		this.setLocationRelativeTo(planner); //Р·Р°РґР°РІР°РјРµ РїРѕР·РёС†РёСЏС‚Р° РЅР° РїСЂРѕР·РѕСЂРµС†Р° СЃРїСЂСЏРјРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°
 
-		JPanel panel = new JPanel(); //създаваме панел
-		panel.setBackground(Color.WHITE); //задаваме цвят за панела
-		panel.setLayout(null); //добавяме нулев layout към панела
-		add(panel); //добавяме панела към диалоговия прозорец
+		JPanel panel = new JPanel(); //СЃСЉР·РґР°РІР°РјРµ РїР°РЅРµР»
+		panel.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С†РІСЏС‚ Р·Р° РїР°РЅРµР»Р°
+		panel.setLayout(null); //РґРѕР±Р°РІСЏРјРµ РЅСѓР»РµРІ layout РєСЉРј РїР°РЅРµР»Р°
+		add(panel); //РґРѕР±Р°РІСЏРјРµ РїР°РЅРµР»Р° РєСЉРј РґРёР°Р»РѕРіРѕРІРёСЏ РїСЂРѕР·РѕСЂРµС†
 		
-		Border blackline = BorderFactory.createLineBorder(Color.BLACK); //създаваме черен Border
+		Border blackline = BorderFactory.createLineBorder(Color.BLACK); //СЃСЉР·РґР°РІР°РјРµ С‡РµСЂРµРЅ Border
 
-		JButton btnCancel = new JButton("Cancel"); //създаваме бутон Cancel
-		btnCancel.setFont(panel.getFont().deriveFont(Font.BOLD, 16.0f)); //задаваме шрифта и размера на шрифта на текста в бутона
-		btnCancel.setBackground(Color.RED); //задаваме червен цвят на бутона
-		btnCancel.setBorder(blackline); //ограждаме бутона Cancel с Border
-		btnCancel.setBounds(400, 250, 125, 50); //задаваме координати на бутона 
-		btnCancel.addActionListener(new ActionListener() { //добавяме функционалност на бутона
+		JButton btnCancel = new JButton("Cancel"); //СЃСЉР·РґР°РІР°РјРµ Р±СѓС‚РѕРЅ Cancel
+		btnCancel.setFont(panel.getFont().deriveFont(Font.BOLD, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р±СѓС‚РѕРЅР°
+		btnCancel.setBackground(Color.RED); //Р·Р°РґР°РІР°РјРµ С‡РµСЂРІРµРЅ С†РІСЏС‚ РЅР° Р±СѓС‚РѕРЅР°
+		btnCancel.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р±СѓС‚РѕРЅР° Cancel СЃ Border
+		btnCancel.setBounds(400, 250, 125, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р±СѓС‚РѕРЅР° 
+		btnCancel.addActionListener(new ActionListener() { //РґРѕР±Р°РІСЏРјРµ С„СѓРЅРєС†РёРѕРЅР°Р»РЅРѕСЃС‚ РЅР° Р±СѓС‚РѕРЅР°
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				AddNewAssignment.this.dispose(); //при натискане на бутона диалоговият прозорец се затваря
+				AddNewAssignment.this.dispose(); //РїСЂРё РЅР°С‚РёСЃРєР°РЅРµ РЅР° Р±СѓС‚РѕРЅР° РґРёР°Р»РѕРіРѕРІРёСЏС‚ РїСЂРѕР·РѕСЂРµС† СЃРµ Р·Р°С‚РІР°СЂСЏ
 			}
 		});
-		panel.add(btnCancel); //добавяме бутона Cancel към панела
+		panel.add(btnCancel); //РґРѕР±Р°РІСЏРјРµ Р±СѓС‚РѕРЅР° Cancel РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblNameOfAssignment = new JLabel("Assignment", SwingConstants.CENTER); //създаваме JLabel с центриран надпис "Assignment"
-		lblNameOfAssignment.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblNameOfAssignment.setBorder(blackline); //ограждаме лейбъла с Border
-		lblNameOfAssignment.setBounds(30, 50, 160, 50); //задаваме координати на лейбъла
-		panel.add(lblNameOfAssignment); //добавяме лейбъла към панела
+		JLabel lblNameOfAssignment = new JLabel("Assignment", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel СЃ С†РµРЅС‚СЂРёСЂР°РЅ РЅР°РґРїРёСЃ "Assignment"
+		lblNameOfAssignment.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblNameOfAssignment.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblNameOfAssignment.setBounds(30, 50, 160, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р»РµР№Р±СЉР»Р°
+		panel.add(lblNameOfAssignment); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblPerson = new JLabel("Person in Charge", SwingConstants.CENTER); //създаваме JLabel с центритан надпис "Person in Charge"
-		lblPerson.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblPerson.setBorder(blackline); //ограждаме лейбъла с Border
-		lblPerson.setBounds(190, 50, 140, 50); //задаваме координати на лейбъла
-		panel.add(lblPerson); //добавяме лейбъла към панела
+		JLabel lblPerson = new JLabel("Person in Charge", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel СЃ С†РµРЅС‚СЂРёС‚Р°РЅ РЅР°РґРїРёСЃ "Person in Charge"
+		lblPerson.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblPerson.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblPerson.setBounds(190, 50, 140, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р»РµР№Р±СЉР»Р°
+		panel.add(lblPerson); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblInitialDate = new JLabel("Initial Date", SwingConstants.CENTER); //създаваме JLabel с центриран надпис "Initial Date"
-		lblInitialDate.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblInitialDate.setBorder(blackline); //ограждаме лейбъла с Border
-		lblInitialDate.setBounds(330, 50, 110, 50); //задаваме координати на лейбъла
-		panel.add(lblInitialDate); //добавяме лейбъла към панела
+		JLabel lblInitialDate = new JLabel("Initial Date", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel СЃ С†РµРЅС‚СЂРёСЂР°РЅ РЅР°РґРїРёСЃ "Initial Date"
+		lblInitialDate.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblInitialDate.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblInitialDate.setBounds(330, 50, 110, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р»РµР№Р±СЉР»Р°
+		panel.add(lblInitialDate); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblDueDate = new JLabel("Due Date", SwingConstants.CENTER); //създаваме JLabel с центриран надпис "Due Date"
-		lblDueDate.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblDueDate.setBorder(blackline); //ограждаме лейбъла с Border
-		lblDueDate.setBounds(440, 50, 150, 50); //задаваме координати на лейбъла
-		panel.add(lblDueDate); //добавяме лейбъла към панела
+		JLabel lblDueDate = new JLabel("Due Date", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel СЃ С†РµРЅС‚СЂРёСЂР°РЅ РЅР°РґРїРёСЃ "Due Date"
+		lblDueDate.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblDueDate.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblDueDate.setBounds(440, 50, 150, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р»РµР№Р±СЉР»Р°
+		panel.add(lblDueDate); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblStatus = new JLabel("Status of Assignment", SwingConstants.CENTER); //създаваме JLabel с центриран надпис "Status of Assignment"
-		lblStatus.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblStatus.setBorder(blackline); //ограждаме лейбъла с Border
-		lblStatus.setBounds(590, 50, 175, 50); //задаваме координати на лейбъла
-		panel.add(lblStatus); //добавяме лейбъла към панела
+		JLabel lblStatus = new JLabel("Status of Assignment", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel СЃ С†РµРЅС‚СЂРёСЂР°РЅ РЅР°РґРїРёСЃ "Status of Assignment"
+		lblStatus.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblStatus.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblStatus.setBounds(590, 50, 175, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р»РµР№Р±СЉР»Р°
+		panel.add(lblStatus); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JTextArea txtAssignment = new JTextArea(); //създаваме JTextArea за въвеждане името на заданието
-		txtAssignment.setLineWrap(true); //ако името на заданието е твърде дълго, то се разделя на няколко реда
-		txtAssignment.setToolTipText("Enter description of the assignment"); //при задържане на курсора върху полето за текст се появява надписът "Enter description of the assignment"
-		txtAssignment.setFont(panel.getFont().deriveFont(Font.ITALIC, 14.0f)); //задаваме шрифта и размера на шрифта на текста в полето за текст
-		txtAssignment.setBorder(blackline); //обграждаме полето за текст с Border
-		txtAssignment.setBounds(30, 100, 160, 100); //задаваме координати на полето за текст
-		panel.add(txtAssignment); //добавяме полето за текст към панела
+		JTextArea txtAssignment = new JTextArea(); //СЃСЉР·РґР°РІР°РјРµ JTextArea Р·Р° РІСЉРІРµР¶РґР°РЅРµ РёРјРµС‚Рѕ РЅР° Р·Р°РґР°РЅРёРµС‚Рѕ
+		txtAssignment.setLineWrap(true); //Р°РєРѕ РёРјРµС‚Рѕ РЅР° Р·Р°РґР°РЅРёРµС‚Рѕ Рµ С‚РІСЉСЂРґРµ РґСЉР»РіРѕ, С‚Рѕ СЃРµ СЂР°Р·РґРµР»СЏ РЅР° РЅСЏРєРѕР»РєРѕ СЂРµРґР°
+		txtAssignment.setToolTipText("Enter description of the assignment"); //РїСЂРё Р·Р°РґСЉСЂР¶Р°РЅРµ РЅР° РєСѓСЂСЃРѕСЂР° РІСЉСЂС…Сѓ РїРѕР»РµС‚Рѕ Р·Р° С‚РµРєСЃС‚ СЃРµ РїРѕСЏРІСЏРІР° РЅР°РґРїРёСЃСЉС‚ "Enter description of the assignment"
+		txtAssignment.setFont(panel.getFont().deriveFont(Font.ITALIC, 14.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїРѕР»РµС‚Рѕ Р·Р° С‚РµРєСЃС‚
+		txtAssignment.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїРѕР»РµС‚Рѕ Р·Р° С‚РµРєСЃС‚ СЃ Border
+		txtAssignment.setBounds(30, 100, 160, 100); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїРѕР»РµС‚Рѕ Р·Р° С‚РµРєСЃС‚
+		panel.add(txtAssignment); //РґРѕР±Р°РІСЏРјРµ РїРѕР»РµС‚Рѕ Р·Р° С‚РµРєСЃС‚ РєСЉРј РїР°РЅРµР»Р°
 
-		JComboBox comboNames = new JComboBox(Team.returnTeam().toArray()); //създаваме падащо меню с имената на членовете на екипа
-		((JLabel) comboNames.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //центрираме имената в падащото меню
-		comboNames.setBackground(Color.WHITE); //задаваме фон на падащото меню
-		comboNames.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //задаваме шрифта и размера на шрифта на текста в падащото меню
-		comboNames.setBorder(blackline); //обграждаме падащото меню с Border
-		comboNames.setBounds(190, 100, 140, 100); //задаваме координати на падащото меню
-		panel.add(comboNames); //добавяме падащото меню към панела
+		JComboBox comboNames = new JComboBox(Team.returnTeam().toArray()); //СЃСЉР·РґР°РІР°РјРµ РїР°РґР°С‰Рѕ РјРµРЅСЋ СЃ РёРјРµРЅР°С‚Р° РЅР° С‡Р»РµРЅРѕРІРµС‚Рµ РЅР° РµРєРёРїР°
+		((JLabel) comboNames.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //С†РµРЅС‚СЂРёСЂР°РјРµ РёРјРµРЅР°С‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboNames.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С„РѕРЅ РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboNames.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboNames.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ СЃ Border
+		comboNames.setBounds(190, 100, 140, 100); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		panel.add(comboNames); //РґРѕР±Р°РІСЏРјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ РєСЉРј РїР°РЅРµР»Р°
 
-		LocalDate initialDate = LocalDate.now(); //променлива от тип Date с днешната дата
+		LocalDate initialDate = LocalDate.now(); //РїСЂРѕРјРµРЅР»РёРІР° РѕС‚ С‚РёРї Date СЃ РґРЅРµС€РЅР°С‚Р° РґР°С‚Р°
 		JLabel lblInitialDateValue = new JLabel(
 				initialDate.getDayOfMonth() + " " + initialDate.getMonth() + " " + initialDate.getYear(),
-				SwingConstants.CENTER); //създаваме JLabel, който да показва днешната дата
-		lblInitialDateValue.setFont(panel.getFont().deriveFont(Font.ITALIC, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblInitialDateValue.setBorder(blackline); //ограждаме лейбъла с Border
-		lblInitialDateValue.setBounds(330, 100, 110, 100); //ограждаме лейбъла с Border
-		panel.add(lblInitialDateValue); //добавяме лейбъла към панела
+				SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel, РєРѕР№С‚Рѕ РґР° РїРѕРєР°Р·РІР° РґРЅРµС€РЅР°С‚Р° РґР°С‚Р°
+		lblInitialDateValue.setFont(panel.getFont().deriveFont(Font.ITALIC, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblInitialDateValue.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblInitialDateValue.setBounds(330, 100, 110, 100); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		panel.add(lblInitialDateValue); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblDay = new JLabel("D", SwingConstants.CENTER); //създаваме JLabel, под който ще седи падащото меню за дата
-		lblDay.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblDay.setBorder(blackline); //ограждаме лейбъла с Border
-		lblDay.setBounds(440, 100, 50, 40); //ограждаме лейбъла с Border
-		panel.add(lblDay); //добавяме лейбъла към панела
+		JLabel lblDay = new JLabel("D", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel, РїРѕРґ РєРѕР№С‚Рѕ С‰Рµ СЃРµРґРё РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ Р·Р° РґР°С‚Р°
+		lblDay.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblDay.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblDay.setBounds(440, 100, 50, 40); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		panel.add(lblDay); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblMonth = new JLabel("M", SwingConstants.CENTER); //създаваме JLabel, под който ще седи падащото меню за месец
-		lblMonth.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblMonth.setBorder(blackline); //ограждаме лейбъла с Border
-		lblMonth.setBounds(490, 100, 50, 40); //ограждаме лейбъла с Border
-		panel.add(lblMonth); //добавяме лейбъла към панела
+		JLabel lblMonth = new JLabel("M", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel, РїРѕРґ РєРѕР№С‚Рѕ С‰Рµ СЃРµРґРё РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ Р·Р° РјРµСЃРµС†
+		lblMonth.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblMonth.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblMonth.setBounds(490, 100, 50, 40); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		panel.add(lblMonth); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
-		JLabel lblYear = new JLabel("Y", SwingConstants.CENTER); //създаваме JLabel, под който ще седи падащото меню за година
-		lblYear.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //задаваме шрифта и размера на шрифта на текста в лейбъла
-		lblYear.setBorder(blackline); //ограждаме лейбъла с Border
-		lblYear.setBounds(540, 100, 50, 40); //ограждаме лейбъла с Border
-		panel.add(lblYear); //добавяме лейбъла към панела
+		JLabel lblYear = new JLabel("Y", SwingConstants.CENTER); //СЃСЉР·РґР°РІР°РјРµ JLabel, РїРѕРґ РєРѕР№С‚Рѕ С‰Рµ СЃРµРґРё РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ Р·Р° РіРѕРґРёРЅР°
+		lblYear.setFont(panel.getFont().deriveFont(Font.BOLD, 15.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р»РµР№Р±СЉР»Р°
+		lblYear.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		lblYear.setBounds(540, 100, 50, 40); //РѕРіСЂР°Р¶РґР°РјРµ Р»РµР№Р±СЉР»Р° СЃ Border
+		panel.add(lblYear); //РґРѕР±Р°РІСЏРјРµ Р»РµР№Р±СЉР»Р° РєСЉРј РїР°РЅРµР»Р°
 
 		String[] days = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17",
-				"18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }; //масив с дати
-		JComboBox comboDays = new JComboBox(days); //падащо меню с възможните дати
-		comboDays.setSelectedIndex(initialDate.getDayOfMonth() - 1); //без да е избрано нищо се показва центрирано днешната дата
-		((JLabel) comboDays.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //центрираме дните в падащото меню
-		comboDays.setBackground(Color.WHITE); //задаваме цвят на падащото меню
-		comboDays.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //задаваме шрифта и размера на шрифта на текста в падащото меню
-		comboDays.setBorder(blackline); //обграждаме падащото меню с Border
-		comboDays.setBounds(440, 140, 50, 60); //задаваме координати на падащото меню
-		panel.add(comboDays); //добавяме падащото меню към панела
+				"18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }; //РјР°СЃРёРІ СЃ РґР°С‚Рё
+		JComboBox comboDays = new JComboBox(days); //РїР°РґР°С‰Рѕ РјРµРЅСЋ СЃ РІСЉР·РјРѕР¶РЅРёС‚Рµ РґР°С‚Рё
+		comboDays.setSelectedIndex(initialDate.getDayOfMonth() - 1); //Р±РµР· РґР° Рµ РёР·Р±СЂР°РЅРѕ РЅРёС‰Рѕ СЃРµ РїРѕРєР°Р·РІР° С†РµРЅС‚СЂРёСЂР°РЅРѕ РґРЅРµС€РЅР°С‚Р° РґР°С‚Р°
+		((JLabel) comboDays.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //С†РµРЅС‚СЂРёСЂР°РјРµ РґРЅРёС‚Рµ РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboDays.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С†РІСЏС‚ РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboDays.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboDays.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ СЃ Border
+		comboDays.setBounds(440, 140, 50, 60); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		panel.add(comboDays); //РґРѕР±Р°РІСЏРјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ РєСЉРј РїР°РЅРµР»Р°
 
-		String[] months = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }; //масив с месеци
-		JComboBox comboMonths = new JComboBox(months); //падащо меню с възможните месеци
-		comboMonths.setSelectedIndex(initialDate.getMonthValue() - 1); //без да е избрано нищо се показва центрирано сегашният месец
-		((JLabel) comboMonths.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //центрираме месеците в падащото меню
-		comboMonths.setBackground(Color.WHITE); //задаваме цвят на падащото меню
-		comboMonths.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //задаваме шрифта и размера на шрифта на текста в падащото меню
-		comboMonths.setBorder(blackline); //обграждаме падащото меню с Border
-		comboMonths.setBounds(490, 140, 50, 60); //задаваме координати на падащото меню
-		panel.add(comboMonths); //добавяме падащото меню към панела
+		String[] months = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }; //РјР°СЃРёРІ СЃ РјРµСЃРµС†Рё
+		JComboBox comboMonths = new JComboBox(months); //РїР°РґР°С‰Рѕ РјРµРЅСЋ СЃ РІСЉР·РјРѕР¶РЅРёС‚Рµ РјРµСЃРµС†Рё
+		comboMonths.setSelectedIndex(initialDate.getMonthValue() - 1); //Р±РµР· РґР° Рµ РёР·Р±СЂР°РЅРѕ РЅРёС‰Рѕ СЃРµ РїРѕРєР°Р·РІР° С†РµРЅС‚СЂРёСЂР°РЅРѕ СЃРµРіР°С€РЅРёСЏС‚ РјРµСЃРµС†
+		((JLabel) comboMonths.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //С†РµРЅС‚СЂРёСЂР°РјРµ РјРµСЃРµС†РёС‚Рµ РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboMonths.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С†РІСЏС‚ РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboMonths.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboMonths.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ СЃ Border
+		comboMonths.setBounds(490, 140, 50, 60); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		panel.add(comboMonths); //РґРѕР±Р°РІСЏРјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ РєСЉРј РїР°РЅРµР»Р°
 
 		String[] years = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
-				"16", "17", "18", "19", "20", "21", "22", "23", "24" }; //масив с години
-		JComboBox comboYears = new JComboBox(years); //падащо меню с възможните години
-		comboYears.setSelectedIndex(initialDate.getYear() - 2001); //без да е избрано нищо се показват центрирано последните 2 цифри на сегашната година
-		((JLabel) comboYears.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //центрираме годините в падащото меню
-		comboYears.setBackground(Color.WHITE); //задаваме цвят на падащото меню
-		comboYears.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //задаваме шрифта и размера на шрифта на текста в падащото меню
-		comboYears.setBorder(blackline); //обграждаме падащото меню с Border
-		comboYears.setBounds(540, 140, 50, 60); //задаваме координати на падащото меню
-		panel.add(comboYears); //добавяме падащото меню към панела
+				"16", "17", "18", "19", "20", "21", "22", "23", "24" }; //РјР°СЃРёРІ СЃ РіРѕРґРёРЅРё
+		JComboBox comboYears = new JComboBox(years); //РїР°РґР°С‰Рѕ РјРµРЅСЋ СЃ РІСЉР·РјРѕР¶РЅРёС‚Рµ РіРѕРґРёРЅРё
+		comboYears.setSelectedIndex(initialDate.getYear() - 2001); //Р±РµР· РґР° Рµ РёР·Р±СЂР°РЅРѕ РЅРёС‰Рѕ СЃРµ РїРѕРєР°Р·РІР°С‚ С†РµРЅС‚СЂРёСЂР°РЅРѕ РїРѕСЃР»РµРґРЅРёС‚Рµ 2 С†РёС„СЂРё РЅР° СЃРµРіР°С€РЅР°С‚Р° РіРѕРґРёРЅР°
+		((JLabel) comboYears.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //С†РµРЅС‚СЂРёСЂР°РјРµ РіРѕРґРёРЅРёС‚Рµ РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboYears.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С†РІСЏС‚ РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboYears.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboYears.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ СЃ Border
+		comboYears.setBounds(540, 140, 50, 60); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		panel.add(comboYears); //РґРѕР±Р°РІСЏРјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ РєСЉРј РїР°РЅРµР»Р°
 
-		String[] status = { "Uncompleted", "Completed" }; //масив с възможните статуси на заданието
-		JComboBox comboStatus = new JComboBox(status); //падащо меню за състоянието на заданието
-		((JLabel) comboStatus.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //центрираме текста в падащото меню
-		comboStatus.setBackground(Color.WHITE); //задаваме цвят на падащото меню
-		comboStatus.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //задаваме шрифта и размера на шрифта на текста в падащото меню
-		comboStatus.setBorder(blackline); //обграждаме падащото меню с Border
-		comboStatus.setBounds(590, 100, 175, 100); //задаваме координати на падащото меню
-		panel.add(comboStatus); //добавяме падащото меню към панела
+		String[] status = { "Uncompleted", "Completed" }; //РјР°СЃРёРІ СЃ РІСЉР·РјРѕР¶РЅРёС‚Рµ СЃС‚Р°С‚СѓСЃРё РЅР° Р·Р°РґР°РЅРёРµС‚Рѕ
+		JComboBox comboStatus = new JComboBox(status); //РїР°РґР°С‰Рѕ РјРµРЅСЋ Р·Р° СЃСЉСЃС‚РѕСЏРЅРёРµС‚Рѕ РЅР° Р·Р°РґР°РЅРёРµС‚Рѕ
+		((JLabel) comboStatus.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER); //С†РµРЅС‚СЂРёСЂР°РјРµ С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboStatus.setBackground(Color.WHITE); //Р·Р°РґР°РІР°РјРµ С†РІСЏС‚ РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboStatus.setFont(panel.getFont().deriveFont(Font.ITALIC, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		comboStatus.setBorder(blackline); //РѕР±РіСЂР°Р¶РґР°РјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ СЃ Border
+		comboStatus.setBounds(590, 100, 175, 100); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ
+		panel.add(comboStatus); //РґРѕР±Р°РІСЏРјРµ РїР°РґР°С‰РѕС‚Рѕ РјРµРЅСЋ РєСЉРј РїР°РЅРµР»Р°
 
-		JButton btnSubmit = new JButton("Submit"); //създаваме бутон Submit 
-		btnSubmit.setFont(panel.getFont().deriveFont(Font.BOLD, 16.0f)); //задаваме шрифта и размера на шрифта на текста в бутона
-		btnSubmit.setBackground(Color.GREEN); //задаваме зелен цвят на бутона
-		btnSubmit.setBorder(blackline); //ограждаме бутона Cancel с Border
-		btnSubmit.setBounds(550, 250, 125, 50); //задаваме координати на бутона 
-		btnSubmit.addActionListener(new ActionListener() { //добавяме функционалност на бутона
+		JButton btnSubmit = new JButton("Submit"); //СЃСЉР·РґР°РІР°РјРµ Р±СѓС‚РѕРЅ Submit 
+		btnSubmit.setFont(panel.getFont().deriveFont(Font.BOLD, 16.0f)); //Р·Р°РґР°РІР°РјРµ С€СЂРёС„С‚Р° Рё СЂР°Р·РјРµСЂР° РЅР° С€СЂРёС„С‚Р° РЅР° С‚РµРєСЃС‚Р° РІ Р±СѓС‚РѕРЅР°
+		btnSubmit.setBackground(Color.GREEN); //Р·Р°РґР°РІР°РјРµ Р·РµР»РµРЅ С†РІСЏС‚ РЅР° Р±СѓС‚РѕРЅР°
+		btnSubmit.setBorder(blackline); //РѕРіСЂР°Р¶РґР°РјРµ Р±СѓС‚РѕРЅР° Cancel СЃ Border
+		btnSubmit.setBounds(550, 250, 125, 50); //Р·Р°РґР°РІР°РјРµ РєРѕРѕСЂРґРёРЅР°С‚Рё РЅР° Р±СѓС‚РѕРЅР° 
+		btnSubmit.addActionListener(new ActionListener() { //РґРѕР±Р°РІСЏРјРµ С„СѓРЅРєС†РёРѕРЅР°Р»РЅРѕСЃС‚ РЅР° Р±СѓС‚РѕРЅР°
 		
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				LocalDate dueDate = LocalDate.of(comboYears.getSelectedIndex() + 2001,
-						comboMonths.getSelectedIndex() + 1, comboDays.getSelectedIndex() + 1); //създаваме променлива от тип Date на база избора на потребителя за крайната дата
-				boolean status = comboStatus.getSelectedItem().equals("Completed") ? true : false; //създаваме променлива от тип boolean на база избора на потребителя за статус на заданието
+						comboMonths.getSelectedIndex() + 1, comboDays.getSelectedIndex() + 1); //СЃСЉР·РґР°РІР°РјРµ РїСЂРѕРјРµРЅР»РёРІР° РѕС‚ С‚РёРї Date РЅР° Р±Р°Р·Р° РёР·Р±РѕСЂР° РЅР° РїРѕС‚СЂРµР±РёС‚РµР»СЏ Р·Р° РєСЂР°Р№РЅР°С‚Р° РґР°С‚Р°
+				boolean status = comboStatus.getSelectedItem().equals("Completed") ? true : false; //СЃСЉР·РґР°РІР°РјРµ РїСЂРѕРјРµРЅР»РёРІР° РѕС‚ С‚РёРї boolean РЅР° Р±Р°Р·Р° РёР·Р±РѕСЂР° РЅР° РїРѕС‚СЂРµР±РёС‚РµР»СЏ Р·Р° СЃС‚Р°С‚СѓСЃ РЅР° Р·Р°РґР°РЅРёРµС‚Рѕ
 				Assignment newAssignment = new Assignment(txtAssignment.getText(),
-						(String) comboNames.getSelectedItem(), initialDate, dueDate, status); //създаваме обект от тип Assignment с параметри на база избора на потребителя
-				AddNewAssignment.this.dispose(); //затваря диалоговия прозорец
-				planner.addToTable(newAssignment); //добавя създадения Assignment към таблицата със задания
+						(String) comboNames.getSelectedItem(), initialDate, dueDate, status); //СЃСЉР·РґР°РІР°РјРµ РѕР±РµРєС‚ РѕС‚ С‚РёРї Assignment СЃ РїР°СЂР°РјРµС‚СЂРё РЅР° Р±Р°Р·Р° РёР·Р±РѕСЂР° РЅР° РїРѕС‚СЂРµР±РёС‚РµР»СЏ
+				AddNewAssignment.this.dispose(); //Р·Р°С‚РІР°СЂСЏ РґРёР°Р»РѕРіРѕРІРёСЏ РїСЂРѕР·РѕСЂРµС†
+				planner.addToTable(newAssignment); //РґРѕР±Р°РІСЏ СЃСЉР·РґР°РґРµРЅРёСЏ Assignment РєСЉРј С‚Р°Р±Р»РёС†Р°С‚Р° СЃСЉСЃ Р·Р°РґР°РЅРёСЏ
 			}
 		});
-		panel.add(btnSubmit); //добавяме бутона към панела
+		panel.add(btnSubmit); //РґРѕР±Р°РІСЏРјРµ Р±СѓС‚РѕРЅР° РєСЉРј РїР°РЅРµР»Р°
 
-		this.setVisible(true); //позволява на диалоговия прозорец да се отвори
+		this.setVisible(true); //РїРѕР·РІРѕР»СЏРІР° РЅР° РґРёР°Р»РѕРіРѕРІРёСЏ РїСЂРѕР·РѕСЂРµС† РґР° СЃРµ РѕС‚РІРѕСЂРё
 	}
 }
